@@ -1,25 +1,19 @@
 <template>
   <v-app>
-          <AppBar/>
     <v-main>
-      <HelloWorld/>
-      <Calendario/>
+      <Inicio/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-import Calendario from './components/Calendario';
-import AppBar from './components/AppBar';
+import Inicio from './components/Inicio';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
-    Calendario,
-    AppBar,
+    Inicio,
   },
 
   data: () => ({

@@ -27,7 +27,7 @@
       </v-btn>
 
       <div class="text-center mr-2">
-        <v-menu offset-y>
+        <v-menu offset-y open-on-hover>
           <template v-slot:activator="{ on, attrs }">
             <v-btn
               v-if="$vuetify.breakpoint.mdAndUp"
@@ -36,17 +36,30 @@
               v-on="on"
               class="text-capitalize"
             >
-              <router-link to="/Nosotros" class="flm">Nosotros</router-link>
+              Servicios
             </v-btn>
           </template>
           <v-list>
-            <v-list-item
-              v-for="(item, index) in items"
-              :key="index"
-              class="bgsel"
-              link
-            >
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item class="bgsel item" link>
+              <v-list-item-title
+                ><router-link to="/Servicios" class="flm"
+                  >Machining Service</router-link
+                ></v-list-item-title
+              >
+            </v-list-item>
+            <v-list-item class="bgsel item" link>
+              <v-list-item-title
+                ><router-link to="/Servicios" class="flm"
+                  >Machining Service</router-link
+                ></v-list-item-title
+              >
+            </v-list-item>
+            <v-list-item class="bgsel item" link>
+              <v-list-item-title
+                ><router-link to="/Servicios" class="flm"
+                  >Machining Service</router-link
+                ></v-list-item-title
+              >
             </v-list-item>
           </v-list>
         </v-menu>
@@ -57,7 +70,7 @@
         dark
         class="text-capitalize mr-2"
       >
-        <router-link to="/Servicios" class="flm">Servicios</router-link>
+        <router-link to="/Nosotros" class="flm">Nosotros</router-link>
       </v-btn>
 
       <v-btn
@@ -66,18 +79,6 @@
         class="text-capitalize mr-14"
       >
         <router-link to="/Contacto" class="flm">Contacto</router-link>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-toolbar>
 
@@ -104,7 +105,7 @@
               <v-icon>mdi-account-multiple</v-icon>
             </v-list-item-icon>
             <v-list-item-title>
-              <router-link to="/Nosotros">About</router-link>
+              <router-link to="/Nosotros">Nosotros</router-link>
             </v-list-item-title>
           </v-list-item>
 
@@ -122,7 +123,7 @@
               <v-icon>mdi-earth</v-icon>
             </v-list-item-icon>
             <v-list-item-title>
-              <router-link to="/Servicios" class="flm">Contacto</router-link>
+              <router-link to="/Contacto" class="flm">Contacto</router-link>
             </v-list-item-title>
           </v-list-item>
         </v-list-item-group>
@@ -137,58 +138,7 @@ export default {
 
   data: () => ({
     drawer: false,
-    group: null,
     items: [{ title: "Misión" }, { title: "Objetivo" }, { title: "Visión" }],
-    ecosystem: [
-      {
-        text: "vuetify-loader",
-        href: "https://github.com/vuetifyjs/vuetify-loader",
-      },
-      {
-        text: "github",
-        href: "https://github.com/vuetifyjs/vuetify",
-      },
-      {
-        text: "awesome-vuetify",
-        href: "https://github.com/vuetifyjs/awesome-vuetify",
-      },
-    ],
-    importantLinks: [
-      {
-        text: "Documentation",
-        href: "https://vuetifyjs.com",
-      },
-      {
-        text: "Chat",
-        href: "https://community.vuetifyjs.com",
-      },
-      {
-        text: "Made with Vuetify",
-        href: "https://madewithvuejs.com/vuetify",
-      },
-      {
-        text: "Twitter",
-        href: "https://twitter.com/vuetifyjs",
-      },
-      {
-        text: "Articles",
-        href: "https://medium.com/vuetify",
-      },
-    ],
-    whatsNext: [
-      {
-        text: "Explore components",
-        href: "https://vuetifyjs.com/components/api-explorer",
-      },
-      {
-        text: "Select a layout",
-        href: "https://vuetifyjs.com/getting-started/pre-made-layouts",
-      },
-      {
-        text: "Frequently Asked Questions",
-        href: "https://vuetifyjs.com/getting-started/frequently-asked-questions",
-      },
-    ],
   }),
 
   methods: {
@@ -206,6 +156,10 @@ export default {
 
 .flm:link {
   text-decoration: none;
+}
+
+.item {
+  background-color: brown;
 }
 
 .v-application a {

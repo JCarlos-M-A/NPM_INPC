@@ -4,7 +4,7 @@
       <v-row>
         <!-- Servicio 1 -->
         <v-card class="mx-auto pb-6" max-width="344">
-          <v-img src="assets/logo.svg" height="200px"></v-img>
+          <v-img src="https://www.conveyors-immsa.com/assets/img/dummies/img1.jpg" height="200px"></v-img>
 
           <v-card-title class="justify-center"> Servicio 1 </v-card-title>
 
@@ -24,7 +24,7 @@
 
         <!-- Servicio 2 -->
         <v-card class="mx-auto pb-6" max-width="344">
-          <v-img src="img/serv2.jpg" height="200px"></v-img>
+          <v-img src="https://www.conveyors-immsa.com/assets/img/dummies/img1.jpg" height="200px"></v-img>
 
           <v-card-title class="justify-center"> Servicio 2 </v-card-title>
 
@@ -44,7 +44,7 @@
 
         <!-- Servicio 3 -->
         <v-card class="mx-auto pb-6" max-width="344">
-          <v-img src="img/serv3.jpg" height="200px"></v-img>
+          <v-img src="https://www.conveyors-immsa.com/assets/img/dummies/img1.jpg" height="200px"></v-img>
 
           <v-card-title class="justify-center"> Servicio 3 </v-card-title>
 

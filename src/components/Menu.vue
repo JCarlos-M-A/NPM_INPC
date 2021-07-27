@@ -1,6 +1,6 @@
 <template>
   <v-card dark>
-    <v-toolbar>
+    <v-toolbar prominent color="#002550">
       <v-app-bar-nav-icon
         @click="drawer = true"
         v-if="$vuetify.breakpoint.xsOnly"
@@ -13,7 +13,7 @@
           'ml-6': $vuetify.breakpoint.mdAndUp,
         }"
       >
-        Mi Proyecto
+      <router-link to="/Home" class="flm" align="center">Mi Proyecto</router-link>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -138,6 +138,7 @@ export default {
 
   data: () => ({
     drawer: false,
+    group: null,
     items: [{ title: "Misión" }, { title: "Objetivo" }, { title: "Visión" }],
   }),
 

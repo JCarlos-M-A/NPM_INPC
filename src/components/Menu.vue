@@ -13,7 +13,9 @@
           'ml-6': $vuetify.breakpoint.mdAndUp,
         }"
       >
-      <router-link to="/Home" class="flm" align="center">Mi Proyecto</router-link>
+        <router-link to="/Home" class="flm" align="center"
+          >Mi Proyecto</router-link
+        >
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -114,7 +116,25 @@
               <v-icon>mdi-format-list-bulleted</v-icon>
             </v-list-item-icon>
             <v-list-item-title>
-              <router-link to="/Servicios" class="flm">Servicios</router-link>
+              <router-link to="/Servicios" class="flm">Ingenieria en manejo de materiales</router-link>
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon>mdi-format-list-bulleted</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>
+              <router-link to="/Servicios" class="flm">Maquinado</router-link>
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon>mdi-format-list-bulleted</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>
+              <router-link to="/Servicios" class="flm">Corte Laser</router-link>
             </v-list-item-title>
           </v-list-item>
 

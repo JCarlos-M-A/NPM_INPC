@@ -19,69 +19,95 @@
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
-
-      <v-btn
-        dark
+      <router-link
+        class="v-btn text-capitalize mr-2"
+        style="
+          background-color: gray;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        "
         v-if="$vuetify.breakpoint.mdAndUp"
-        class="text-capitalize mr-2 v-btn--active"
+        to="/Home"
       >
-        <router-link to="/Home" class="flm">Home</router-link>
-      </v-btn>
+        Home
+      </router-link>
 
-      <div class="text-center mr-2">
-        <v-menu offset-y open-on-hover>
+      <div class="text-center">
+        <v-menu offset-y open-on-hover v-if="$vuetify.breakpoint.mdAndUp">
           <template v-slot:activator="{ on, attrs }">
-            <v-btn
-              v-if="$vuetify.breakpoint.mdAndUp"
-              dark
+            <div
+              class="v-btn"
               v-bind="attrs"
               v-on="on"
-              class="text-capitalize"
+              style="
+                background-color: gray;
+                margin-right: 0.5rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+              "
             >
               Servicios
-            </v-btn>
+            </div>
           </template>
           <v-list>
-            <v-list-item class="bgsel item" link>
-              <v-list-item-title
-                ><router-link to="/Servicios" class="flm"
+            <v-list-item class="item">
+              <v-list-item-title>
+                <router-link to="/Servicios" class="flm"
                   >Machining Service</router-link
-                ></v-list-item-title
-              >
+                >
+              </v-list-item-title>
             </v-list-item>
-            <v-list-item class="bgsel item" link>
-              <v-list-item-title
-                ><router-link to="/Servicios" class="flm"
+            <v-list-item class="item">
+              <v-list-item-title>
+                <router-link to="/Servicios" class="flm"
                   >Machining Service</router-link
-                ></v-list-item-title
-              >
+                >
+              </v-list-item-title>
             </v-list-item>
-            <v-list-item class="bgsel item" link>
-              <v-list-item-title
-                ><router-link to="/Servicios" class="flm"
+            <v-list-item class="item">
+              <v-list-item-title>
+                <router-link to="/Servicios" class="flm"
                   >Machining Service</router-link
-                ></v-list-item-title
-              >
+                >
+              </v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
       </div>
 
-      <v-btn
+      <router-link
+        class="v-btn text-capitalize mr-2"
+        style="
+          background-color: gray;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        "
         v-if="$vuetify.breakpoint.mdAndUp"
-        dark
-        class="text-capitalize mr-2"
+        to="/Nosotros"
       >
-        <router-link to="/Nosotros" class="flm">Nosotros</router-link>
-      </v-btn>
+        Nosotros
+      </router-link>
 
-      <v-btn
+      <router-link
+        class="v-btn text-capitalize mr-2"
+        style="
+          background-color: gray;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        "
         v-if="$vuetify.breakpoint.mdAndUp"
-        dark
-        class="text-capitalize mr-14"
+        to="/Contacto"
       >
-        <router-link to="/Contacto" class="flm">Contacto</router-link>
-      </v-btn>
+        Contacto
+      </router-link>
     </v-toolbar>
 
     <v-navigation-drawer
@@ -116,7 +142,9 @@
               <v-icon>mdi-format-list-bulleted</v-icon>
             </v-list-item-icon>
             <v-list-item-title>
-              <router-link to="/Servicios" class="flm">Ingenieria en manejo de materiales</router-link>
+              <router-link to="/Servicios" class="flm"
+                >Ingenieria en manejo de materiales</router-link
+              >
             </v-list-item-title>
           </v-list-item>
 
@@ -125,7 +153,7 @@
               <v-icon>mdi-format-list-bulleted</v-icon>
             </v-list-item-icon>
             <v-list-item-title>
-              <router-link to="/Servicios" class="flm">Maquinado</router-link>
+              <!--<router-link to="/Servicios" class="flm">Maquinado</router-link>-->
             </v-list-item-title>
           </v-list-item>
 
@@ -134,7 +162,7 @@
               <v-icon>mdi-format-list-bulleted</v-icon>
             </v-list-item-icon>
             <v-list-item-title>
-              <router-link to="/Servicios" class="flm">Corte Laser</router-link>
+              <!--<router-link to="/Servicios" class="flm">Corte Laser</router-link>-->
             </v-list-item-title>
           </v-list-item>
 
@@ -157,6 +185,9 @@ export default {
   name: "Inicio",
 
   data: () => ({
+    //drop
+    isOpen: false,
+
     drawer: false,
     group: null,
     items: [{ title: "Misión" }, { title: "Objetivo" }, { title: "Visión" }],
@@ -165,6 +196,9 @@ export default {
   methods: {
     menuItems() {
       return this.menu;
+    },
+    cambia(location) {
+      location.href = location;
     },
   },
 };

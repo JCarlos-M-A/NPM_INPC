@@ -2,6 +2,7 @@
   <v-app>
     <v-main>
       <Calendario />
+     <div class="mb-10"></div>
     </v-main>
   </v-app>
 </template>

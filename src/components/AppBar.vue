@@ -4,7 +4,7 @@
     <v-toolbar-title>Title</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn elevation="0" @click='direccion("/inicio")'>Inicio</v-btn>
+      <v-btn elevation="0" @click='direccion("/")'>Inicio</v-btn>
       <v-btn elevation="0" @click='direccion("/nosotros")'>Nosotros</v-btn>
       <v-btn elevation="0" @click='direccion("/proyectos")'>Proyectos</v-btn>
       <v-btn elevation="0" @click='direccion("/contacto")'>Contacto</v-btn>

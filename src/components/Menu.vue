@@ -8,7 +8,7 @@
       </v-app-bar-nav-icon>
       <v-spacer></v-spacer>
       <router-link
-        to="/Home"
+        to="/"
         class="flm"
         align="center"
         v-if="$vuetify.breakpoint.mdAndUp"
@@ -32,7 +32,7 @@
           margin-top: 3rem;
         "
         v-if="$vuetify.breakpoint.mdAndUp"
-        to="/Home"
+        to="/"
       >
         <v-icon left dark> mdi-home </v-icon>
         Inicio
@@ -59,25 +59,25 @@
               <v-icon right dark> mdi-chevron-down </v-icon>
             </div>
           </template>
-          <v-list style="padding-top: 0; padding-bottom: 0;">
+          <v-list style="padding-top: 0; padding-bottom: 0">
             <v-list-item class="itemDrop">
-              <v-list-item-title>
+              <v-list-item-title class="text-left">
                 <router-link to="/Servicios" class="flm"
-                  >Machining Service</router-link
+                  >Servicio de maquinado</router-link
                 >
               </v-list-item-title>
             </v-list-item>
             <v-list-item class="itemDrop">
-              <v-list-item-title>
+              <v-list-item-title class="text-left">
                 <router-link to="/Servicios" class="flm"
-                  >Machining Service</router-link
+                  >Ingenieria en manejo de materiales</router-link
                 >
               </v-list-item-title>
             </v-list-item>
             <v-list-item class="itemDrop">
-              <v-list-item-title>
+              <v-list-item-title class="text-left">
                 <router-link to="/Servicios" class="flm"
-                  >Machining Service</router-link
+                  >Corte laser</router-link
                 >
               </v-list-item-title>
             </v-list-item>
@@ -135,7 +135,7 @@
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
             <v-list-item-title>
-              <router-link to="/Home" class="flm">Home</router-link>
+              <router-link to="/" class="flm">Home</router-link>
             </v-list-item-title>
           </v-list-item>
 
@@ -239,5 +239,9 @@ export default {
   background-color: #005;
   color: #fff !important;
   border-bottom: 1px dotted white;
+}
+.itemDrop:hover {
+  cursor: pointer;
+  background-color: rgb(1, 1, 20);
 }
 </style>

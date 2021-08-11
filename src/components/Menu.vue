@@ -1,6 +1,6 @@
 <template>
   <v-card dark>
-    <v-toolbar prominent color="#002550">
+    <v-toolbar color="#b30000">
       <v-app-bar-nav-icon
         @click="drawer = true"
         v-if="$vuetify.breakpoint.xsOnly"

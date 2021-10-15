@@ -1,6 +1,6 @@
 <template>
   <v-card dark>
-    <v-toolbar color="#b30000">
+    <v-toolbar class="colorToolbar">
       <v-app-bar-nav-icon
         @click="drawer = true"
         v-if="$vuetify.breakpoint.xsOnly"
@@ -205,6 +205,7 @@ export default {
 </script>
 
 <style scope>
+
 .bgsel:hover {
   background: #afaeae;
 }
@@ -219,5 +220,9 @@ export default {
 
 .v-application a {
   color: #ffffff !important;
+}
+
+.colorToolbar{
+  background-color: #333333;
 }
 </style>

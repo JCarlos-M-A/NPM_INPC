@@ -1,19 +1,30 @@
 <template>
   <v-app>
-    <v-main>
-      <Servicios />
+    <v-main class="body">
+      <v-row no-gutters>
+        <v-col cols="12" sm="2">
+        </v-col>
+        <v-col cols="12" sm="8">
+          <CurriculumTitle />
+          <CurriculumContenido />
+        </v-col>
+        <v-col cols="12" sm="2">
+        </v-col>
+      </v-row>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Servicios from "../components/Inicio/Carrousel.vue";
+import CurriculumTitle from "../components/Inicio/CurriculumTitle.vue";
+import CurriculumContenido from "../components/Inicio/CurriculumContenido.vue";
 
 export default {
   name: "Contacto",
 
   components: {
-    Servicios,
+    CurriculumTitle,
+    CurriculumContenido,
   },
 
   data: () => ({
@@ -21,5 +32,11 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+.body {
+  background-color: #5f5f5f;
+}
+</style>
 
 

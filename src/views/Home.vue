@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main class="body">
       <Servicios />
       <Carrousel />
     </v-main>
@@ -24,5 +24,13 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+
+.body{
+  background-color: #5f5f5f;
+}
+
+</style>
 
 

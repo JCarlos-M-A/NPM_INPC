@@ -1,37 +1,34 @@
 <template>
   <v-card dark>
-    <v-toolbar class="colorToolbar">
+    <v-toolbar prominent color="#333333">
       <v-app-bar-nav-icon
         @click="drawer = true"
         v-if="$vuetify.breakpoint.xsOnly"
       >
       </v-app-bar-nav-icon>
-
-      <v-toolbar-title
-        :class="{
-          '': $vuetify.breakpoint.smAndDown,
-          'ml-6': $vuetify.breakpoint.mdAndUp,
-        }"
-      >
-        <router-link to="/Home" class="flm" align="center"
-          >Mi Proyecto</router-link
-        >
-      </v-toolbar-title>
-
       <v-spacer></v-spacer>
+      <router-link
+        to="/"
+        class="flm"
+        align="center"
+        v-if="$vuetify.breakpoint.mdAndUp"
+      >
+      </router-link>
       <router-link
         class="v-btn text-capitalize mr-2"
         style="
-          background-color: gray;
+          background-color: #664747;
           padding-left: 1rem;
           padding-right: 1rem;
           padding-top: 0.5rem;
           padding-bottom: 0.5rem;
+          margin-top: 3rem;
         "
         v-if="$vuetify.breakpoint.mdAndUp"
-        to="/Home"
+        to="/"
       >
-        Home
+        <v-icon left dark> mdi-home </v-icon>
+        Inicio
       </router-link>
 
       <div class="text-center">
@@ -42,36 +39,38 @@
               v-bind="attrs"
               v-on="on"
               style="
-                background-color: gray;
+                background-color: #664747;
                 margin-right: 0.5rem;
                 padding-left: 1rem;
                 padding-right: 1rem;
                 padding-top: 0.5rem;
                 padding-bottom: 0.5rem;
+                margin-top: 3rem;
               "
             >
               Servicios
+              <v-icon right dark> mdi-chevron-down </v-icon>
             </div>
           </template>
-          <v-list>
-            <v-list-item class="item">
-              <v-list-item-title>
+          <v-list style="padding-top: 0; padding-bottom: 0">
+            <v-list-item class="itemDrop">
+              <v-list-item-title class="text-left">
                 <router-link to="/Servicios" class="flm"
-                  >Machining Service</router-link
+                  >Servicio de maquinado</router-link
                 >
               </v-list-item-title>
             </v-list-item>
-            <v-list-item class="item">
-              <v-list-item-title>
+            <v-list-item class="itemDrop">
+              <v-list-item-title class="text-left">
                 <router-link to="/Servicios" class="flm"
-                  >Machining Service</router-link
+                  >Ingenieria en manejo de materiales</router-link
                 >
               </v-list-item-title>
             </v-list-item>
-            <v-list-item class="item">
-              <v-list-item-title>
+            <v-list-item class="itemDrop">
+              <v-list-item-title class="text-left">
                 <router-link to="/Servicios" class="flm"
-                  >Machining Service</router-link
+                  >Corte laser</router-link
                 >
               </v-list-item-title>
             </v-list-item>
@@ -82,32 +81,37 @@
       <router-link
         class="v-btn text-capitalize mr-2"
         style="
-          background-color: gray;
+          background-color: #664747;
           padding-left: 1rem;
           padding-right: 1rem;
           padding-top: 0.5rem;
           padding-bottom: 0.5rem;
+          margin-top: 3rem;
         "
         v-if="$vuetify.breakpoint.mdAndUp"
         to="/Nosotros"
       >
+        <v-icon left dark large> mdi-groups </v-icon>
         Nosotros
       </router-link>
 
       <router-link
         class="v-btn text-capitalize mr-2"
         style="
-          background-color: gray;
+          background-color: #664747;
           padding-left: 1rem;
           padding-right: 1rem;
           padding-top: 0.5rem;
           padding-bottom: 0.5rem;
+          margin-top: 3rem;
         "
         v-if="$vuetify.breakpoint.mdAndUp"
         to="/Contacto"
       >
         Contacto
       </router-link>
+
+      <v-spacer></v-spacer>
     </v-toolbar>
 
     <v-navigation-drawer
@@ -124,7 +128,7 @@
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
             <v-list-item-title>
-              <router-link to="/Home" class="flm">Home</router-link>
+              <router-link to="/" class="flm">Home</router-link>
             </v-list-item-title>
           </v-list-item>
 
@@ -222,7 +226,16 @@ export default {
   color: #ffffff !important;
 }
 
-.colorToolbar{
-  background-color: #333333;
+.imagCursor:hover {
+  cursor: pointer;
+}
+.itemDrop {
+  background-color: #005;
+  color: #fff !important;
+  border-bottom: 1px dotted white;
+}
+.itemDrop:hover {
+  cursor: pointer;
+  background-color: rgb(1, 1, 20);
 }
 </style>

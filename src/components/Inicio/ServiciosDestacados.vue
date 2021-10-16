@@ -4,8 +4,6 @@
       <v-row>
         <!-- Servicio 1 -->
         <v-card class="mx-auto pb-6" max-width="344">
-          <v-img src="https://www.conveyors-immsa.com/assets/img/dummies/img1.jpg" height="200px"></v-img>
-
           <v-card-title class="justify-center"> Servicio 1 </v-card-title>
 
           <v-card-subtitle class="alinearjustificado">

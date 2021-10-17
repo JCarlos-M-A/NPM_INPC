@@ -17,7 +17,7 @@
       <router-link
         class="v-btn text-capitalize mr-2"
         style="
-          background-color: #664747;
+          background-color: #666666;
           padding-left: 1rem;
           padding-right: 1rem;
           padding-top: 0.5rem;
@@ -39,7 +39,7 @@
               v-bind="attrs"
               v-on="on"
               style="
-                background-color: #664747;
+                background-color: #666666;
                 margin-right: 0.5rem;
                 padding-left: 1rem;
                 padding-right: 1rem;
@@ -56,21 +56,21 @@
             <v-list-item class="itemDrop">
               <v-list-item-title class="text-left">
                 <router-link to="/Servicios" class="flm"
-                  >Servicio de maquinado</router-link
+                  >HTML</router-link
                 >
               </v-list-item-title>
             </v-list-item>
             <v-list-item class="itemDrop">
               <v-list-item-title class="text-left">
                 <router-link to="/Servicios" class="flm"
-                  >Ingenieria en manejo de materiales</router-link
+                  >JAVASCRIPT</router-link
                 >
               </v-list-item-title>
             </v-list-item>
             <v-list-item class="itemDrop">
               <v-list-item-title class="text-left">
                 <router-link to="/Servicios" class="flm"
-                  >Corte laser</router-link
+                  >CSS</router-link
                 >
               </v-list-item-title>
             </v-list-item>
@@ -81,7 +81,7 @@
       <router-link
         class="v-btn text-capitalize mr-2"
         style="
-          background-color: #664747;
+          background-color: #666666;
           padding-left: 1rem;
           padding-right: 1rem;
           padding-top: 0.5rem;
@@ -98,7 +98,7 @@
       <router-link
         class="v-btn text-capitalize mr-2"
         style="
-          background-color: #664747;
+          background-color: #666666;
           padding-left: 1rem;
           padding-right: 1rem;
           padding-top: 0.5rem;
@@ -230,12 +230,12 @@ export default {
   cursor: pointer;
 }
 .itemDrop {
-  background-color: #005;
+  background-color: #666666;
   color: #fff !important;
   border-bottom: 1px dotted white;
 }
 .itemDrop:hover {
   cursor: pointer;
-  background-color: rgb(1, 1, 20);
+  background-color: #333333;
 }
 </style>
